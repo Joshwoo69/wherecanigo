@@ -7,7 +7,7 @@ DV = raw_input('DV? >:')
 place = raw_input('Where you wanna go? Specify planet name only! >:')
 print('calculating...')
 #moho
-logging.debug('MOHO(Holioun MELEE CHRISTMAS!)')
+logging.debug('MOHO(Holioum MELEE CHRISTMAS!)')
 LandedMoho = 8390
 orbitMoho = 7520
 MohoSlingshot = 5110
@@ -172,11 +172,11 @@ elif place in ['Eve','eve','EVE']:
 	print('Eve ellipical orbit to SOI: ' + str(DV-elliSOIeve) )
 	print('168 Days Duna slingshot: ' + str(DV-eveSlingshot) )
 elif place in ['kerbol','Kerbol','Sun','sun']:
-	logging.Fatal(' There is no point to land on the sun! but anyways.. here is the numbers:')
+	logging.fatal(' There is no point to land on the sun! but anyways.. here is the numbers:')
 	print('---------------------------------------------------------')
-	print('Landed on gilly: ' + str(DV-LandedKerbol) )
-	print('10K Orbit around Ike: ' + str(DV-orbitKerbol) )
-	print('-NULL- Days Ike slingshot: ' + str(DV-elliSOIKerbol) )
+	print('"Landed" on sun: ' + str(DV-LandedKerbol) )
+	print('10K Orbit around Sun: ' + str(DV-orbitKerbol) )
+	print('elliplical sun SOI: ' + str(DV-elliSOIKerbol) )
 elif place in ['Eeloo','eeloo','far far away planet']:
 	print('Landed on Eeloo: ' + str(DV-LandedEeloo) )
 	print('10K Orbit around Eeloo: ' + str(DV-orbitEeloo) )
@@ -190,6 +190,14 @@ elif place in ['Kerbin','Home','home','kerbin']:
 	print('10K Orbit around Minmus: ' + str(DV-orbitKerbin) )
 	print('Kerbin Equalatral orbit (KEO) ' + str(DV-KEOOrbit) )
 	print('Kerbin eliiipical orbit to SOI ' + str(DV-elliSOIKerbin) )
+elif place in ['Mun','mun','moon','Moon']:
+	print('Landed on Mun: ' + str(DV-LandedMun) )
+	print('14K Orbit around Mun: ' + str(DV-orbitMun) )
+	print('8 Hours Mun slingshot: ' + str(DV-MunSlingshot) )
+elif place in ['Moho','moho']:
+	print('Landed on Mun: ' + str(DV-LandedMoho) )
+	print('14K Orbit around Mun: ' + str(DV-orbitMoho) )
+	print('8 Hours Mun slingshot: ' + str(DV-MohoSlingshot) )
 else:
 	print(place + ' is not a valid location!')
 
